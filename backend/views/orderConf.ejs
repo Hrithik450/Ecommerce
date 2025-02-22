@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Confirmation</title>
+    <style>
+      body {
+        font-family: "Times New Roman", Times, serif;
+        color: #333;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 550px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+
+      .header {
+        text-align: center;
+      }
+
+      .header img {
+        border: 1px solid white;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      .body {
+        padding: 1rem;
+        text-align: left;
+      }
+
+      .desc {
+        margin: 1rem 0;
+        font-size: 1.1rem;
+      }
+
+      h3 {
+        margin: 1rem 0;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f4f4f4;
+      }
+
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #0088ff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+
+      .button:hover {
+        background-color: #0077dd;
+      }
+
+      .footer {
+        margin-top: 20px;
+        font-size: 14px;
+        text-align: left;
+        color: #555;
+      }
+
+      .link {
+        color: #0073e6;
+        text-decoration: none;
+      }
+
+      .link:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 479px) {
+        .body {
+          padding: 1rem 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img
+          src="https://res.cloudinary.com/duozomapm/image/upload/v1737799706/AnuvBanner2_lp8bqd.jpg"
+          alt="ANOX"
+        />
+      </div>
+
+      <div class="body">
+        <h2>Order Confirmed Successfully</h2>
+        <h3>Dear <%= orderDetails.customerName %>,</h3>
+        <p class="desc">
+          Thank you for shopping with Anox Clothing Brand! Your order has been
+          successfully placed. Below are your order details:
+        </p>
+
+        <h3>Order Details</h3>
+        <ul>
+          <li>
+            <strong>Order Number:</strong> <%= orderDetails.orderNumber %>
+          </li>
+          <li><strong>Order Date:</strong> <%= orderDetails.orderDate %></li>
+          <li>
+            <strong>Total Amount:</strong> <%= orderDetails.totalAmount %>
+          </li>
+          <li>
+            <strong>Payable Amount:</strong> <%= orderDetails.totalPayableAmount
+            %>
+          </li>
+          <li>
+            <strong>Payment Method:</strong> <%= orderDetails.paymentMethod %>
+          </li>
+        </ul>
+
+        <h3>Shipping Information</h3>
+        <ul>
+          <li>
+            <strong>Shipping Address:</strong> <%= orderDetails.shippingAddress
+            %>
+          </li>
+          <li>
+            <strong>Shipping Method:</strong> <%= orderDetails.shippingMethod %>
+          </li>
+          <li>
+            <strong>Estimated Delivery Date:</strong> <%=
+            orderDetails.estimatedDelivery %>
+          </li>
+        </ul>
+
+        <h3>Ordered Items</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Product</th>
+              <th>Quantity</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% orderDetails.items.forEach(function(item, index) { %>
+            <tr>
+              <td><%= index + 1 %></td>
+              <td><%= item.product %></td>
+              <td><%= item.quantity %></td>
+              <td><%= item.price %></td>
+            </tr>
+            <% }); %>
+          </tbody>
+        </table>
+
+        <a href="<%= CLIENT_URL %>/account" class="button">Track Your Order!</a>
+
+        <p>Thank you for choosing Anox Clothing Brand!</p>
+        <p>Best Regards,</p>
+        <p>Team ANOX</p>
+        <p>
+          Need help?
+          <a href="<%= CLIENT_URL %>/contact-us" class="link"
+            >Contact us here.</a
+          >
+        </p>
+      </div>
+
+      <div class="footer">
+        &copy; 2025-2026 All rights reserved | Designed and Developed by
+        <a href="https://hruthik.onrender.com">Hruthik M</a>
+      </div>
+    </div>
+  </body>
+</html>

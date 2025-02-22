@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verify Email</title>
+    <style>
+      body {
+        font-family: "Times New Roman", Times, serif;
+        color: #333;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 550px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+
+      .header {
+        text-align: center;
+      }
+
+      .header img {
+        border: 1px solid white;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      .body {
+        padding: 1rem;
+        text-align: left;
+      }
+
+      .body .desc {
+        margin: 1rem 0;
+        font-size: 1.1rem;
+      }
+
+      .body p {
+        margin: 0.5rem 0;
+        font-size: 1.1rem;
+      }
+
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 1rem;
+        background-color: #0088ff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+
+      .button:hover {
+        background-color: #0077dd;
+      }
+
+      .note {
+        color: red;
+      }
+
+      .footer {
+        padding: 10px;
+        font-size: 0.9rem;
+        text-align: left;
+        color: #555;
+      }
+
+      .link {
+        color: #0073e6;
+        text-decoration: none;
+      }
+
+      .link:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 479px) {
+        .body {
+          padding: 1rem 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img
+          src="https://res.cloudinary.com/duozomapm/image/upload/v1737799706/AnuvBanner2_lp8bqd.jpg"
+          alt="ANOX"
+        />
+      </div>
+
+      <div class="body">
+        <h2>Password Changed Successfully</h2>
+        <p class="desc">
+          Your password has been updated successfully. If this was you, no
+          further action is required.
+        </p>
+        <a href="<%= resetlink %>" class="button">Reset My password</a>
+
+        <p class="note">
+          Note:- If you did not make this change, it could indicate unauthorized
+          access to your account. Please reset your password immediately or
+          contact our support team for assistance.
+        </p>
+        <p>Thank you,</p>
+        <p>Team ANOX</p>
+        <p>
+          Need help?
+          <a href="<%= CLIENT_URL %>/contact-us" class="link"
+            >Contact us here.</a
+          >
+        </p>
+      </div>
+
+      <div class="footer">
+        © 2025-2026 All rights reserved | Designed and Developed by
+        <a href="https://hruthik.onrender.com">Hruthik M</a>
+      </div>
+    </div>
+  </body>
+</html>

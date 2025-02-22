@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verify Email</title>
+    <style>
+      body {
+        font-family: "Times New Roman", Times, serif;
+        color: #333;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 550px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+
+      .header {
+        text-align: center;
+      }
+
+      .header img {
+        border: 1px solid white;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      .body {
+        padding: 1rem;
+        text-align: left;
+      }
+
+      .body .desc {
+        margin: 1rem 0;
+        font-size: 1.1rem;
+      }
+
+      .body p {
+        margin: 0.5rem 0;
+        font-size: 1.1rem;
+        line-height: 1.5;
+      }
+
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #0088ff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+
+      .button:hover {
+        background-color: #0077dd;
+      }
+
+      .note {
+        color: red;
+      }
+
+      .footer {
+        margin-top: 20px;
+        font-size: 14px;
+        text-align: left;
+        color: #555;
+      }
+
+      .link {
+        color: #0073e6;
+        text-decoration: none;
+      }
+
+      .link:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 479px) {
+        .body {
+          padding: 1rem 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img
+          src="https://res.cloudinary.com/duozomapm/image/upload/v1737799706/AnuvBanner2_lp8bqd.jpg"
+          alt="ANOX"
+        />
+      </div>
+
+      <div class="body">
+        <h2>Thank you for registering on ANOX</h2>
+        <p class="desc">
+          Please verify your email address to complete your registration. Your
+          email verification code:
+        </p>
+        <a href="#" class="button"><%= verificationToken %></a>
+        <p class="note">
+          Note:- The verification code is valid only for 10 minutes.
+        </p>
+        <p>Thank you,</p>
+        <p>Team ANOX</p>
+        <p>
+          Need help?
+          <a href="<%= CLIENT_URL %>/contact-us" class="link"
+            >Contact us here.</a
+          >
+        </p>
+      </div>
+
+      <div class="footer">
+        © 2025-2026 All rights reserved | Designed and Developed by
+        <a href="https://hruthik.onrender.com">Hruthik M</a>
+      </div>
+    </div>
+  </body>
+</html>

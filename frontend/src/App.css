@@ -1,0 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  scrollbar-width: none;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
