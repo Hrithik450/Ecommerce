@@ -31,7 +31,7 @@ const Hero = () => {
             <div className="part-1">
               <img src={HeroProducts[1]?.image} alt="" />
               <div className="text-content">
-                <p className="head-tag">Mega Discount 🎉</p>
+                <p className="head-tag">Combo Discount 🎉</p>
                 <h3>{HeroProducts[1]?.typeName}</h3>
                 <h2>
                   <span>{HeroProducts[1]?.saleDiscount}%</span> OFF
