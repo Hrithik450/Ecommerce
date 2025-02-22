@@ -59,10 +59,10 @@ async function fetchUserDetails(userID) {
   const userQuery = query(usersRef, where("userID", "==", userID));
   const userSnapshot = await getDocs(userQuery);
   if (userSnapshot.empty) {
-    return res.status(404).json({
+    return {
       success: false,
       message: "User not found!",
-    });
+    };
   }
   return userSnapshot.docs[0].data();
 }
