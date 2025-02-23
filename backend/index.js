@@ -14,6 +14,7 @@ import cartRoutes from "./routes/cart.js";
 import orderRoutes from "./routes/orders.js";
 import addressRoutes from "./routes/address.js";
 import webhookRoutes from "./routes/webhook.js";
+import scriptRoutes from "./routes/scripts.js";
 import simpleGit from "simple-git";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -52,6 +53,7 @@ app.use("/api/v1/product", productRoutes);
 app.use("/api/v1/cart", cartRoutes);
 app.use("/api/v1/order", orderRoutes);
 app.use("/api/v1/address", addressRoutes);
+app.use("/api/v1/scripts", scriptRoutes);
 app.use(errorMiddleware);
 
 app.listen(PORT, () => {
