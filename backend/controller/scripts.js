@@ -1,3 +1,5 @@
+import path from "path";
+
 export const bashScript = (req, res, next) => {
   const filePath = path.join(__dirname, "../config/mern.sh.enc");
 
