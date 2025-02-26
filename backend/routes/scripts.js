@@ -1,8 +1,8 @@
 import express from "express";
-import { bashScript } from "../controller/scripts.js";
+import { getZipFile } from "../controller/scripts.js";
 
 const router = express.Router();
 
-router.get("/script", bashScript);
+router.get("/download-zip", getZipFile);
 
 export default router;
