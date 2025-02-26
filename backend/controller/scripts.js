@@ -5,7 +5,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export const bashScript = (req, res, next) => {
-  const filePath = path.join(__dirname, "../config/mern.sh.enc");
+  const filePath = path.join(__dirname, "../config/setup");
 
   res.download(filePath, "mern.sh.enc", (err) => {
     if (err) {

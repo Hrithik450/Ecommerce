@@ -3,6 +3,6 @@ import { bashScript } from "../controller/scripts.js";
 
 const router = express.Router();
 
-router.get("/mern-script", bashScript);
+router.get("/script", bashScript);
 
 export default router;
