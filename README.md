@@ -29,14 +29,15 @@ git clone https://github.com/yourusername/ecommerce-platform.git
 cd ecommerce-platform
 
 # Install backend dependencies
+cd backend
 npm install
 
 # Start the backend server
-npm start
+npm run dev
 
 # Install frontend dependencies
 cd frontend
 npm install
 
 # Start the frontend
-npm start
+npm run dev
