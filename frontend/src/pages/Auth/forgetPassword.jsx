@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 import { forgetPassword } from "../../store/slices/auth/authThunks";
+import DotSpinner from "../../components/common/dotSpinner";
 
 const ForgetPassword = () => {
   const navigate = useNavigate();
