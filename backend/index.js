@@ -20,9 +20,10 @@ import simpleGit from "simple-git";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-dotenv.config();
+dotenv.config({ path: path.resolve(__dirname, ".env") });
 
 const app = express();
+const git = simpleGit();
 const PORT = process.env.PORT;
 
 app.set("view engine", "ejs");
